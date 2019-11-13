@@ -8,10 +8,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>test param</title>
+    <title>写html前端跟写java的XML一样无聊</title>
 </head>
 <body>
-    <h1>写html前端跟写java的XML一样无聊</h1>
-    <a href="/param/testParam?username=leo&password=1234">参数测试</a>
+
+<%--    <a href="/param/testParam?username=leo&password=1234">参数测试</a>--%>
+    <form action="/param/testUser" method="post" />
+用户名：<input type="text" name="username" /></body></br>
+        密码：<input type="password" name="password" /></br>
+        账户名: <input type="text" name="account.username" /></br>
+        账户余额：<input type="text" name="account.money" /></br>
+        <input type="submit" value="提交" />
+    </form>
+
 </body>
 </html>
