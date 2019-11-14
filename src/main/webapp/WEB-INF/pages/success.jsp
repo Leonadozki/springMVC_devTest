@@ -11,6 +11,6 @@
     <title>success page</title>
 </head>
 <body>
-    <p>redirect success</p>
+    <h1>Redirect Success !</h1>
 </body>
 </html>
