@@ -3,7 +3,9 @@ package com.devTest.controller;
 import com.devTest.domain.Element;
 import com.devTest.domain.User;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,21 +16,23 @@ public class ParamController {
 
     /**
      * 普通入参测试
+     *  前端参数名不一致时@RequestParam指定
      */
     @RequestMapping("/testParam")
-    public String testParam(String username, String password){
+    public String testParam(@RequestParam(name = "name") String username,
+                            String password){
         System.out.println("用户名： "+ username);
         System.out.println("密码： "+ password);
         return "success";
     }
 
     /**
-     * @param user
+     * @param
      * @return 单个实体类绑定
      */
     @RequestMapping("/testUser")
-    public String testUser(User user){
-        System.out.println(user);
+    public String testUser(@RequestBody String body){
+        System.out.println(body);
         return "success";
     }
 
