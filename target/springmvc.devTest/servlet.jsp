@@ -13,6 +13,5 @@
 <body>
 <h1>welcome page</h1>
     <a href="/param/testServlet">测试servlet</a>
-</form>
 </body>
 </html>
