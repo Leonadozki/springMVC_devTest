@@ -27,7 +27,7 @@ public class JsonController {
 
     /**
      *  jackson自动转换bean为json返回
-     *  @ResponseBody 返回javaBean对象
+     *  @ResponseBody 返回javaBean的json化对象（通过jackson）
      */
     @RequestMapping("/jacksonTest")
     public @ResponseBody Account jacksonTest(@RequestBody Account account){
