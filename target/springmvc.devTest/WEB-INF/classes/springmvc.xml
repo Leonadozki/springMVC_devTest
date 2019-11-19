@@ -24,6 +24,9 @@
         </property>
     </bean>
 
+    <!--  解除前端控制器对静态资源的拦截   -->
+    <mvc:resources location="/js/" mapping="/js/**"  />
+
     <!--  开启springMVC注解的支持   -->
     <mvc:annotation-driven conversion-service="conversionServiceFactoryBean" />
 </beans>

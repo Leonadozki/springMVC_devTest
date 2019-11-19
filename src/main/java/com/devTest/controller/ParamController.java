@@ -7,8 +7,10 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @Controller
 @RequestMapping("/param")
@@ -104,5 +106,15 @@ public class ParamController {
     public String getSessionAttributes(ModelMap modelMap){
         System.out.println( modelMap.get("msg") );
         return "success";
+    }
+
+    /**
+     *  测试void手动写转发
+     */
+    @RequestMapping("/testVoid")
+    public void testVoid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("testVoid执行了");
+        request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
+        return;
     }
 }
