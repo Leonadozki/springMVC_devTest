@@ -30,7 +30,6 @@ public class ParamController {
     }
 
     /**
-     * @param
      * @return 单个实体类绑定
      */
     @RequestMapping("/testUser")
@@ -115,6 +114,5 @@ public class ParamController {
     public void testVoid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("testVoid执行了");
         request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
-        return;
     }
 }

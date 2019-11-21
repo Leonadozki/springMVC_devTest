@@ -1,5 +1,7 @@
 package com.devTest.controller;
 
+import com.sun.jersey.api.client.Client;
+import com.sun.jersey.api.client.WebResource;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -76,5 +78,26 @@ public class UploadController {
         // 完成文件上传
         upload.transferTo(new File(path, uploadName));
         request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
+    }
+
+    /**
+     *  跨服务器上传文件
+     */
+    @RequestMapping("/serverWay")
+    public String testServerUpload(MultipartFile upload) throws Exception {
+        // 定义上传文件服务器路径
+        String path = "http://localhost:8090/uploads/";
+        // 获取上传文件的名称
+        String name = upload.getOriginalFilename();
+        // 文件名称设置唯一值uuid
+        String uuid = UUID.randomUUID().toString().replace("-", "");
+        name = uuid + "_" + name;
+        // 创建客户端对象（基于jersey包）
+        Client client = Client.create();
+        // 和图片服务器连接
+        WebResource resource = client.resource(path + name);
+        // 上传文件（字节流）
+        resource.put(upload.getBytes());
+        return "upload_success";
     }
 }

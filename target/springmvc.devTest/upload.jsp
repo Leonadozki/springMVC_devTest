@@ -24,5 +24,13 @@
             <br>
             <input type="submit" value="上传">
         </form>
+
+        <h3>跨服务器上传方式</h3>
+
+        <form action="/upload/serverWay" method="post" enctype="multipart/form-data">
+            <input type="file" name="upload" />
+            <br>
+            <input type="submit" value="上传">
+        </form>
     </body>
 </html>
