@@ -29,6 +29,14 @@
         </property>
     </bean>
 
+    <!-- 配置拦截器   -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/interceptor/* "/>
+            <bean class="com.devTest.interceptor.MyInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
+
     <!--  解除前端控制器对静态资源的拦截   -->
     <mvc:resources location="/js/" mapping="/js/**"  />
 
