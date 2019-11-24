@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>cookie test</title>
+    <title>interceptor test</title>
 </head>
     <body>
         <a href="/interceptor/testInterceptor">测试拦截器</a>

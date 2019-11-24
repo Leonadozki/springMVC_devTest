@@ -32,7 +32,7 @@
     <!-- 配置拦截器   -->
     <mvc:interceptors>
         <mvc:interceptor>
-            <mvc:mapping path="/interceptor/* "/>
+            <mvc:mapping path="/interceptor/*" />
             <bean class="com.devTest.interceptor.MyInterceptor" />
         </mvc:interceptor>
     </mvc:interceptors>

@@ -13,6 +13,6 @@
     <body>
         <h1>哦豁， 出错了!</h1>
         <h2>异常信息： ${ errorMsg }</h2>
-        <p>${ logMsg }</p>
+        <% System.out.println("error视图内print执行..."); %>
     </body>
 </html>
