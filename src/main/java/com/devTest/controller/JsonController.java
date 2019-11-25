@@ -33,7 +33,6 @@ public class JsonController {
     public @ResponseBody Account jacksonTest(@RequestBody Account account){
         System.out.println("执行jacksonTest方法");
         System.out.println(account);
-        account.setUsername("modify username");
         account.setMoney(12.00);
         return account;
     }
