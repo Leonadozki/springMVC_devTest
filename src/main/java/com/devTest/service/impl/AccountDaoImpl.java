@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ *  dao接口实现类（练习用，一般不写实现类）
+ */
 @Service
 public class AccountDaoImpl implements IAccountDao {
     @Override

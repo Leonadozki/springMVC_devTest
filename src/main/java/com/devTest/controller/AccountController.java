@@ -11,7 +11,7 @@ import javax.annotation.Resource;
 public class AccountController {
 
     @Resource
-    AccountDaoImpl accountDao;
+    private AccountDaoImpl accountDao;
 
     /**
      * @return 所有账户信息
