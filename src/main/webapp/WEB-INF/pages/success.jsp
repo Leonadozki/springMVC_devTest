@@ -17,6 +17,8 @@
 
     ${ sessionScope }
 
+    ${ map }
+
     <% System.out.println("success视图内print执行..."); %>
 </body>
 </html>

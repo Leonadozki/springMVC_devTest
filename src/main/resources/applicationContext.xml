@@ -8,5 +8,22 @@
         <!--  配置不扫描SpringMVC的controller注解    -->
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
-    
+
+    <!-- spring整合mybatis框架   -->
+    <!-- 配置连接池  -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/javatest?serverTimezone=CTT" />
+        <property name="user" value="root" />
+        <property name="password" value="root" />
+    </bean>
+    <!--  配置SqlSessionFactory工厂  -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <!--  配置dao接口所在包  -->
+    <bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.devTest.dao" />
+    </bean>
+
 </beans>

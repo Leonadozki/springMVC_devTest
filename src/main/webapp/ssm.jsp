@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>cookie test</title>
+    <title>ssm整合 test</title>
 </head>
     <body>
         <a href="/account/list">ssm的listAll测试</a>
