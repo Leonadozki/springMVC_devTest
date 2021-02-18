@@ -21,7 +21,7 @@
     <spring.version>5.0.2.RELEASE</spring.version>
 
     <!-- jackson版本   -->
-    <jackson-2-version>2.10.1</jackson-2-version>
+    <jackson-2-version>2.12.1</jackson-2-version>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
